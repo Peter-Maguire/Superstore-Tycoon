@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/Isjaki.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/LWJGL/jar/AppleJavaExtensions.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/LWJGL/jar/asm-debug-all.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/LWJGL/jar/jinput.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/LWJGL/jar/lwjgl.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/LWJGL/jar/lwjgl_test.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/LWJGL/jar/lwjgl_util.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/LWJGL/jar/lwjgl_util_applet.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/LWJGL/jar/lwjgl-debug.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/LWJGL/jar/lzma.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
