@@ -1,28 +1,27 @@
 package com.fightthetoast.superstore;
 
-import org.isjaki.Base2DGame;
+import org.isjaki.GameBase;
 
 import com.fightthetoast.superstore.screen.Screen;
 
-public class Game extends Base2DGame{
-
+public class Game extends GameBase{
 	
+
 	public static final int DEFAULT_WIDTH = 800, DEFAULT_HEIGHT = 600;
 	public static final String GAME_TITLE = "Superstore Tycoon";
 	
 	protected Screen currentScreen = null;
 	
 	
-	public Game(String name, int width, int height, boolean vsync,
-			boolean resizable) {
-		super(name, width, height, vsync, resizable);
-		this.start();
+	public Game(String name, int width, int height) {
+		super(name, width, height);
+		start();
 	}
-	
+
 	
 	public static void main(String[] args)
 	{
-		new Game(Game.GAME_TITLE, DEFAULT_WIDTH, DEFAULT_HEIGHT, true, true);
+		new Game(GAME_TITLE, DEFAULT_WIDTH, DEFAULT_HEIGHT);
 	}
 	
 	@Override
@@ -41,9 +40,10 @@ public class Game extends Base2DGame{
 	
 	protected void setScreen(Screen screen)
 	{
-		currentScreen.onScreenDestroy();
+		currentScreen.onScreenDestroy(screen);
+		screen.onScreenCreate(currentScreen);
 		currentScreen = screen;
-		currentScreen.onScreenCreate();
+
 	}
 
 	
