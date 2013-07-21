@@ -26,9 +26,9 @@ public class ScreenInGame extends Screen{
 	public void onScreenCreate(Screen previousScreen) {
 		//Load map
 		isles.add(new Isle(true,true,"Test Isle"));
-		isles.add(new Isle(true,true,"Test Isle"));
-		isles.add(new Isle(true,true,"Test Isle"));
-		isles.add(new Isle(true,true,"Test Isle"));
+		isles.add(new Isle(false,true,"Test Isle1"));
+		isles.add(new Isle(true,false,"Test Isle2"));
+		isles.add(new Isle(false,false,"Test Isle3"));
 	
 		setWindow(new IGWStoreOverview(this));
 	}
