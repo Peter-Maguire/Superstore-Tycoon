@@ -7,6 +7,7 @@ import org.isjaki.util.vec2f;
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fightthetoast.superstore.screen.Screen;
+import com.fightthetoast.superstore.screen.ScreenMainSplash;
 
 public class Game extends GameBase{
 	
@@ -17,7 +18,7 @@ public class Game extends GameBase{
 	protected Screen currentScreen = null;
 	
 	
-	Texture splash = Loader.texture("C:\\Users\\Peter\\git\\SuperstoreTycoon\\res\\loading.png");
+	public Texture splash;
 	
 	
 	public Game(String name, int width, int height) {
@@ -34,7 +35,8 @@ public class Game extends GameBase{
 	@Override
 	protected void init()
 	{
-		
+		splash = Loader.texture("res/loading.png");
+		setScreen(new ScreenMainSplash(this));
 	}
 	
 	@Override
@@ -48,13 +50,14 @@ public class Game extends GameBase{
 	@Override
 	protected void render()
 	{
-		splash.render(new vec2f(10, 20));
-		//currentScreen.render();
+		
+		currentScreen.render();
 	}
 	
 	
 	protected void setScreen(Screen screen)
 	{
+		if(currentScreen != null)
 		currentScreen.onScreenDestroy(screen);
 		screen.onScreenCreate(currentScreen);
 		currentScreen = screen;

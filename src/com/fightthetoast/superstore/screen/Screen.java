@@ -6,7 +6,8 @@ public abstract class Screen {
 
 	
 	protected Game game;
-	public void Screen(Game game)
+	
+	public Screen(Game game)
 	{
 		this.game = game;
 	}
