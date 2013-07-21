@@ -14,13 +14,17 @@ public class IGWStoreOverview extends IngameWindow{
 		super(sig);
 	}
 
-	@Override
+	@Override//
 	public void render() {
 		
-		int c = 10;
+		
+		sig.game.backdrop.render(new vec2f(0,0));
+		int c = 0;
 		for(Isle i : sig.isles)
-		{
-			drawIsle(i,120+(40*c), 320);
+		{	
+			
+			drawIsle(i,300+(40*c), 290+c*15);
+			c++;
 		
 		}
 	}
@@ -32,8 +36,8 @@ public class IGWStoreOverview extends IngameWindow{
 		sig.game.sheetTiles.render(new vec2f(x, y+32), new vec2f(0,1), 0);
 		sig.game.sheetTiles.render(new vec2f(x+32, y), new vec2f(1,0), 0);
 		sig.game.sheetTiles.render(new vec2f(x+32, y+32), new vec2f(1,1), 0);
-		if(isle.hasIsleSign())
-			sig.game.sheetTiles.render(new vec2f(x+42, y-10), new vec2f(3,0), 0);
+		//if(isle.hasIsleSign())
+			//sig.game.sheetTiles.render(new vec2f(x+42, y-10), new vec2f(3,0), 0);
 	}
 
 }
