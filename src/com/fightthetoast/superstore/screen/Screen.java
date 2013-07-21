@@ -5,7 +5,7 @@ import com.fightthetoast.superstore.Game;
 public abstract class Screen {
 
 	
-	protected Game game;
+	public Game game;
 	
 	public Screen(Game game)
 	{

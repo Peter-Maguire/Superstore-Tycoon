@@ -2,11 +2,11 @@ package com.fightthetoast.superstore;
 
 import org.isjaki.GameBase;
 import org.isjaki.Loader;
+import org.isjaki.graphics.Spritesheet;
 import org.isjaki.graphics.Texture;
-import org.isjaki.util.vec2f;
-import org.lwjgl.util.vector.Vector2f;
 
 import com.fightthetoast.superstore.screen.Screen;
+import com.fightthetoast.superstore.screen.ScreenInGame;
 import com.fightthetoast.superstore.screen.ScreenMainSplash;
 
 public class Game extends GameBase{
@@ -18,7 +18,8 @@ public class Game extends GameBase{
 	protected Screen currentScreen = null;
 	
 	
-	public Texture splash;
+	public Texture splash, ui, tiles;
+	public Spritesheet sheetUI, sheetTiles;
 	
 	
 	public Game(String name, int width, int height) {
@@ -35,8 +36,17 @@ public class Game extends GameBase{
 	@Override
 	protected void init()
 	{
+		System.out.println("Loading textures...");
 		splash = Loader.texture("res/loading.png");
 		setScreen(new ScreenMainSplash(this));
+		ui = Loader.texture("res/ui.png");
+		tiles = Loader.texture("res/tiles.png");
+		sheetUI = new Spritesheet(ui,32,32);
+		sheetTiles = new Spritesheet(tiles,32,32);
+		System.out.println("Done!");
+		setScreen(new ScreenInGame(this));
+		
+		
 	}
 	
 	@Override
@@ -50,7 +60,6 @@ public class Game extends GameBase{
 	@Override
 	protected void render()
 	{
-		
 		currentScreen.render();
 	}
 	
