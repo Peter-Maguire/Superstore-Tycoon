@@ -1,0 +1,14 @@
+TODO
+------------------
+Change colour of isle sign
+Finish overlay
+Draw Bezel for overlay
+Draw products
+Draw CCTV Bezel and effects
+Draw Close up of isles
+Draw shoppers
+AI For shoppers
+Checkouts managment
+Main menu
+Tutorial
+Make everything resizeable
