@@ -7,6 +7,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.fightthetoast.superstore.Game;
 import com.fightthetoast.superstore.Isle;
+import com.fightthetoast.superstore.Resources;
 import com.fightthetoast.superstore.screen.window.IGWStoreOverview;
 import com.fightthetoast.superstore.screen.window.IngameWindow;
 
@@ -43,11 +44,11 @@ public class ScreenInGame extends Screen{
 	
 	private void drawOverlay()
 	{
-		game.sheetUI.render(new vec2f(700,10), new vec2f(0,0));
-		game.sheetUI.render(new vec2f(732,10), new vec2f(1,0));
-		game.sheetUI.render(new vec2f(764,10), new vec2f(2,0));
-		game.sheetUI.render(new vec2f(760,10), new vec2f(3,0));
-		game.font.drawString("____", 10, 10);
+		Resources.sheetUI.render(new vec2f(700,10), new vec2f(0,0));
+		Resources.sheetUI.render(new vec2f(732,10), new vec2f(1,0));
+		Resources.sheetUI.render(new vec2f(764,10), new vec2f(2,0));
+		Resources.sheetUI.render(new vec2f(760,10), new vec2f(3,0));
+		Resources.font.render("Test", new vec2f(10,10));
 	}
 
 	@Override

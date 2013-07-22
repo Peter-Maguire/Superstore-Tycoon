@@ -18,9 +18,7 @@ public class Game extends GameBase{
 	protected Screen currentScreen = null;
 	
 	
-	public Texture splash, ui, tiles, backdrop, texFont;
-	public Spritesheet sheetUI, sheetTiles, sheetFont;
-	public Font font;
+
 	
 	
 	public Game(String name, int width, int height) {
@@ -38,16 +36,13 @@ public class Game extends GameBase{
 	protected void init()
 	{
 		System.out.println("Loading textures...");
-		splash = Loader.texture("res/loading.png");
+		
+		Resources.init();
 		setScreen(new ScreenMainSplash(this));
-		ui = Loader.texture("res/ui.png");
-		tiles = Loader.texture("res/tiles.png");
-		backdrop = Loader.texture("res/backdrop.png");
-		texFont = Loader.texture("res/simple_6x8.png");
-		sheetFont = new Spritesheet(texFont, 6, 8);
-		font = new Font(sheetFont);
-		sheetUI = new Spritesheet(ui,32,32);
-		sheetTiles = new Spritesheet(tiles,32,32);
+		render();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {}
 		System.out.println("Done!");
 		setScreen(new ScreenInGame(this));
 		

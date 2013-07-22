@@ -3,6 +3,7 @@ package com.fightthetoast.superstore.screen;
 import org.isjaki.util.vec2f;
 
 import com.fightthetoast.superstore.Game;
+import com.fightthetoast.superstore.Resources;
 
 public class ScreenMainSplash extends Screen{
 
@@ -20,7 +21,7 @@ public class ScreenMainSplash extends Screen{
 
 	@Override
 	public void render() {
-		game.splash.render(new vec2f(0, 0));
+		Resources.splash.render(new vec2f(0, 0));
 	}
 	
 	
