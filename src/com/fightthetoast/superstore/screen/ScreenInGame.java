@@ -47,6 +47,7 @@ public class ScreenInGame extends Screen{
 		game.sheetUI.render(new vec2f(732,10), new vec2f(1,0));
 		game.sheetUI.render(new vec2f(764,10), new vec2f(2,0));
 		game.sheetUI.render(new vec2f(760,10), new vec2f(3,0));
+		game.font.drawString("Test", 10, 10);
 	}
 
 	@Override
