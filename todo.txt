@@ -12,3 +12,4 @@ Checkouts managment
 Main menu
 Tutorial
 Make everything resizeable
+Imrpove backdrop art

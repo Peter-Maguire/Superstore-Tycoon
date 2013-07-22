@@ -22,6 +22,8 @@ public class ScreenMainSplash extends Screen{
 	public void render() {
 		game.splash.render(new vec2f(0, 0));
 	}
+	
+	
 
 	@Override
 	public void onScreenDestroy(Screen newScreen) {

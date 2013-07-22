@@ -9,7 +9,7 @@ import org.isjaki.util.vec2f;
 public class Font {
 
 
-	private static final String font = " !\"#$%&()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_'abcdefghijklmnopqrstuvwxyz{|}";
+	private static final String font = " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_'abcdefghijklmnopqrstuvwxyz{|}";
 	private Spritesheet fontsheet;
 	private HashMap<String, Texture> sheet = new HashMap<String, Texture>();
 	
@@ -27,10 +27,19 @@ public class Font {
 	
 	public void drawString(String text, int x, int y)
 	{
-		for(int i = 0; i < font.length(); i++)
+		for(int i = 0; i < text.length(); i++)
 		{
-			
-				fontsheet.render(new vec2f(x+(i*6),y), new vec2f(i,0));
+			for(int k = 0; k < font.length(); k++)
+			{
+				if(text.charAt(i)==font.charAt(k) && text.charAt(i) != " ".charAt(0))
+				{
+					fontsheet.render(new vec2f(x+(i*6),y), new vec2f(k,0));
+				}
+					
+				
+				
+			}
+				
 			
 		}
 	}

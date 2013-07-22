@@ -27,6 +27,13 @@ public class IGWStoreOverview extends IngameWindow{
 			c++;
 		
 		}
+		drawBezel();
+	}
+	
+	private void drawBezel()
+	{
+
+		
 	}
 	
 	
