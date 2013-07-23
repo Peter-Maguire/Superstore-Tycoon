@@ -52,7 +52,7 @@ public class Game extends GameBase{
 	@Override
 	protected void update()
 	{
-		
+		currentScreen.tick();
 	}
 	
 	

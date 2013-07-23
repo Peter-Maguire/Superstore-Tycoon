@@ -32,4 +32,8 @@ public class ScreenMainSplash extends Screen{
 		
 	}
 
+	@Override
+	public void tick() {		
+	}
+
 }
