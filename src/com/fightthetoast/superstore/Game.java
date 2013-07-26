@@ -53,7 +53,7 @@ public class Game extends GameBase{
 	protected void update()
 	{
 		currentScreen.tick();
-	}
+	}	
 	
 	
 	

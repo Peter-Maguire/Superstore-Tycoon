@@ -1,5 +1,9 @@
 package com.fightthetoast.superstore.screen.window;
 
+import org.isjaki.util.vec2f;
+
+import com.fightthetoast.superstore.Game;
+import com.fightthetoast.superstore.Resources;
 import com.fightthetoast.superstore.screen.ScreenInGame;
 
 public abstract class IngameWindow {
@@ -13,5 +17,16 @@ public abstract class IngameWindow {
 	}
 	
 	public abstract void render();
+	
+	public void drawWhiteBackground()
+	{
+		for(int x = 0; x < Game.DEFAULT_WIDTH/32; x++)
+		{
+			for(int y = 0; y < Game.DEFAULT_HEIGHT+32/32; y++)
+			{
+				Resources.sheetUI.render(new vec2f(x*32, y*32),new vec2f(2,1));
+			}
+		}
+	}
 	
 }
