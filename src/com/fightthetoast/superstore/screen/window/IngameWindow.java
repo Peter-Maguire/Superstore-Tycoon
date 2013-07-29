@@ -29,4 +29,15 @@ public abstract class IngameWindow {
 		}
 	}
 	
+	public void drawGUIBox()
+	{
+		for(int x = 0; x < Game.DEFAULT_WIDTH-400/32; x++)
+		{
+			for(int y = 0; y < Game.DEFAULT_HEIGHT-132/32; y++)
+			{
+				Resources.sheetUI.render(new vec2f(x*32, y*32),new vec2f(8,1));
+			}
+		}
+	}
+	
 }

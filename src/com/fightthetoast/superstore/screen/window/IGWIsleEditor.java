@@ -11,6 +11,7 @@ public class IGWIsleEditor extends IngameWindow{
 	@Override
 	public void render() {
 		drawWhiteBackground();
+		drawGUIBox();
 	}
 
 }

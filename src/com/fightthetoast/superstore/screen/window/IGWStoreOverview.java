@@ -15,7 +15,7 @@ public class IGWStoreOverview extends IngameWindow{
 		super(sig);
 	}
 
-	@Override//
+	@Override
 	public void render() {
 		
 		
