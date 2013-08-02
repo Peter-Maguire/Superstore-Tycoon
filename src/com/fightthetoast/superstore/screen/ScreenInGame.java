@@ -59,12 +59,7 @@ public class ScreenInGame extends Screen{
 		
 		
 		drawOverlay();
-		
-		
-		
 
-		
-		
 	}
 	
 	private void drawIsle(Isle isle, int x, int y)
