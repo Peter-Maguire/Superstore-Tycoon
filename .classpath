@@ -3,16 +3,20 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="res"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/Isjaki.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/LWJGL/jar/AppleJavaExtensions.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/LWJGL/jar/asm-debug-all.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/LWJGL/jar/jinput.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/LWJGL/jar/lwjgl.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/LWJGL/jar/lwjgl_test.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/LWJGL/jar/lwjgl_util.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/LWJGL/jar/lwjgl_util_applet.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/LWJGL/jar/lwjgl-debug.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/LWJGL/jar/lzma.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/PNGDecoder.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/lwjgl-2.9.0/jar/jinput.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/lwjgl-2.9.0/jar/lwjgl.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/Users/Peter/Documents/Java%20Libraries/lwjgl-2.9.0/doc/"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Users/Peter/Documents/Java Libraries/lwjgl-2.9.0/native/windows"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/lwjgl-2.9.0/jar/lwjgl_util.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/lwjgl-2.9.0/jar/lzma.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Peter/Documents/Java Libraries/slick2D/lib/slick.jar" sourcepath="C:/Users/Peter/Documents/Java Libraries/slick2D/src">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/Users/Peter/Documents/Java%20Libraries/slick2D/javadoc/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
