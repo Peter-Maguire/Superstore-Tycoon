@@ -10,6 +10,9 @@ public class ImageResource
 	
 	//SCENERY
 	public static Image tile;
+	public static Image tileSelected;
+	public static Image tileEntrance;
+	
 	
 	//UI
 	
@@ -18,5 +21,7 @@ public class ImageResource
 		vendingMachineF = new Image("res/vending_machine_1.png");
 		
 		tile = new Image("res/floor.png");
+		tileSelected = new Image("res/floor_selected.png");
+		tileEntrance = new Image("res/floor_entrance_1.png");
 	}
 }

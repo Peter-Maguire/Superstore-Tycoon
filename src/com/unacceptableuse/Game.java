@@ -21,6 +21,8 @@ public class Game extends BasicGame
 	public static final int GAME_WIDTH = 800;
 	public static final int GAME_HEIGHT = 600;
 	
+	public static Graphics g = null;
+	
 	public static Screen currentScreen = null;
 	
 	public Game(String title)
@@ -33,7 +35,9 @@ public class Game extends BasicGame
 	public void render(GameContainer container, Graphics g)
 			throws SlickException
 	{
+		this.g = g;
 		currentScreen.render();
+		
 	}
 
 	@Override
@@ -57,6 +61,11 @@ public class Game extends BasicGame
 			throws SlickException
 	{
 		currentScreen.tick();
+	}
+	
+	public static void drawText(String text, int x, int y)
+	{
+		g.drawString(text, x, y);
 	}
 	
 	
