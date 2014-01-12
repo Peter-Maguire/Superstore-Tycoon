@@ -10,6 +10,7 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 
 import com.unacceptableuse.resource.ImageResource;
+import com.unacceptableuse.resource.TileRegistry;
 import com.unacceptableuse.screen.Screen;
 import com.unacceptableuse.screen.ScreenShop;
 
@@ -43,6 +44,7 @@ public class Game extends BasicGame
 	@Override
 	public void init(GameContainer container) throws SlickException
 	{
+		TileRegistry.init();
 		ImageResource.init();
 		setScreen(new ScreenShop("shop name", null));
 		

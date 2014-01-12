@@ -1,12 +1,16 @@
 package com.unacceptableuse.resource;
 
+import java.util.HashMap;
+
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
+
+import com.unacceptableuse.tile.Tile;
 
 public class ImageResource
 {
 	//OBJECTS
-	public static Image vendingMachineF;
+	public static HashMap<String, Image> tiles = new HashMap<String, Image>(); //FIXME: Hashmaps are bad and you should feel bad
 	
 	//SCENERY
 	public static Image tile;
@@ -18,7 +22,11 @@ public class ImageResource
 	
 	public static void init() throws SlickException
 	{
-		vendingMachineF = new Image("res/vending_machine_1.png");
+		
+		for(Tile t : TileRegistry.tiles)
+		{
+			 tiles.put(t.getClass().getName(), new Image(t.getResPath()));
+		}
 		
 		tile = new Image("res/floor.png");
 		tileSelected = new Image("res/floor_selected.png");
