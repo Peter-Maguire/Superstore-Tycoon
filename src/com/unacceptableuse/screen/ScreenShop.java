@@ -2,6 +2,7 @@ package com.unacceptableuse.screen;
 
 import java.util.Random;
 
+import com.unacceptableuse.Game;
 import com.unacceptableuse.resource.ImageResource;
 import com.unacceptableuse.tile.Tile;
 import com.unacceptableuse.tile.TileEmpty;
@@ -17,6 +18,8 @@ public class ScreenShop extends Screen
         public int entranceY = 9;
         
         public Tile[][] tiles = new Tile[floorWidth][floorLength];
+        
+        public int money = 0;
         
         public Random random = new Random(); //temp random for testing
 
@@ -40,6 +43,7 @@ public class ScreenShop extends Screen
                                 }
                                 else
                                 {
+                                	
                                         ImageResource.tile.draw(350 + (y - y * 30 + (x * 29)), 200 + (y * 15 + (x * 15)));
                                        // Game.drawText(x + ", " + y, 360 + (y - y * 30 + (x * 29)), 205 + (y * 15 + (x * 15)));
                                 }
@@ -49,6 +53,9 @@ public class ScreenShop extends Screen
                              //   tiles[x][y] = random.nextInt(10) == 0 ? new TileVendingMachine() : new TileEmpty(); //Uncomment for dancing vending machines
                         }
                 }
+                
+                
+                Game.drawText("$"+money, 750, 10);
                 
           
 
@@ -66,7 +73,7 @@ public class ScreenShop extends Screen
                 {
                         for(int x = 0; x < floorLength; x++)
                         {
-                        	tiles[x][y] = x == 0 ? new TileVendingMachine() : new TileEmpty();     
+                        	tiles[x][y] = y < 2 ? new TileVendingMachine() : new TileEmpty();     
                         }
                 }
         }
