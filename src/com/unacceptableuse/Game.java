@@ -1,6 +1,8 @@
 package com.unacceptableuse;
 
+import java.awt.List;
 import java.util.ArrayList;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -28,7 +30,9 @@ public class Game extends BasicGame
 	
 	public static Screen currentScreen = null;
 	
-	private static ArrayList<Button> buttons = new ArrayList<Button>();
+	private static CopyOnWriteArrayList<Button> buttons = new CopyOnWriteArrayList<Button>();
+
+
 	
 	public Game(String title)
 	{
@@ -41,8 +45,9 @@ public class Game extends BasicGame
 			throws SlickException
 	{
 		this.g = g;
-		currentScreen.render();
 		renderButtons();
+		currentScreen.render();
+
 		
 	}
 	
@@ -61,7 +66,7 @@ public class Game extends BasicGame
 		buttons.add(b);
 	}
 	
-	public static ArrayList<Button> getButtons()
+	public static CopyOnWriteArrayList<Button> getButtons()
 	{
 		return buttons;
 	}
@@ -82,6 +87,7 @@ public class Game extends BasicGame
 	
 	public static void setScreen(Screen screen)
 	{
+		clearButtons();
 		if(currentScreen != null)
 			currentScreen.onExit();
 		currentScreen = screen;
@@ -122,7 +128,7 @@ public class Game extends BasicGame
 	}
 	public void mousePressed(int button, int x, int y)
 	{
-		if(button == 1)
+		if(button == 0)
 		{
 			for(Button b : buttons)
 			{
@@ -132,11 +138,11 @@ public class Game extends BasicGame
 				}
 			}
 		}
-	
 	}
 	public void mouseReleased(int button, int x, int y)
 	{
-		
+
+
 	}
 	public void mouseWheelMoved(int change)
 	{

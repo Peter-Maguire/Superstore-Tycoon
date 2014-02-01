@@ -89,11 +89,11 @@ public class ScreenShop extends Screen
         @Override
         public void init()
         {
-        	Button b = new Button();
-        	b.setBackgroundImage(ImageResource.buttonFurniture);
-        	b.setAction("furniture");
-        	b.setBoundingBox(new Rectangle(10, 550, 32, 32));
-        	Game.addButton(b);
+        	Game.addButton(new Button().setBackgroundImage(ImageResource.buttonFurniture).setAction("furniture").setBoundingBox(new Rectangle(10, 550, 64, 42)));
+        	Game.addButton(new Button().setBackgroundImage(ImageResource.buttonGraph).setAction("graph").setBoundingBox(new Rectangle(74, 550, 64, 42)));
+        	Game.addButton(new Button().setBackgroundImage(ImageResource.buttonMoney).setAction("money").setBoundingBox(new Rectangle(134, 550, 64, 42)));
+        	
+        	
                 for(int y = 0; y < floorWidth; y++)
                 {
                         for(int x = 0; x < floorLength; x++)
@@ -112,6 +112,10 @@ public class ScreenShop extends Screen
 		@Override
 		public void buttonAction(String action)
 		{
+			if(action.equals("furniture"))
+				Game.setScreen(new ScreenShop("Shop", this));
+				
+		
 		}
         
         

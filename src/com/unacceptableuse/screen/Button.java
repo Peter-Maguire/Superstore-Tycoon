@@ -18,33 +18,37 @@ public class Button
 	{
 		return backgroundImage;
 	}
-	public void setBackgroundImage(Image backgroundImage)
+	public Button setBackgroundImage(Image backgroundImage)
 	{
 		this.backgroundImage = backgroundImage;
+		return this;
 	}
 	public String getAction()
 	{
 		return action;
 	}
-	public void setAction(String action)
+	public Button setAction(String action)
 	{
 		this.action = action;
+		return this;
 	}
 	public Rectangle getBoundingBox()
 	{
 		return boundingBox;
 	}
-	public void setBoundingBox(Rectangle boundingBox)
+	public Button setBoundingBox(Rectangle boundingBox)
 	{
 		this.boundingBox = boundingBox;
+		return this;
 	}
 	public String getText()
 	{
 		return text;
 	}
-	public void setText(String text)
+	public Button setText(String text)
 	{
 		this.text = text;
+		return this;
 	}
 	
 	
