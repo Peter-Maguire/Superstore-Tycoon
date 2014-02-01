@@ -19,6 +19,8 @@ public class ImageResource
 	
 	
 	//UI
+	public static Image buttonMoney, buttonGraph, buttonFurniture;
+	
 	
 	public static void init() throws SlickException
 	{
@@ -31,5 +33,9 @@ public class ImageResource
 		tile = new Image("res/floor.png");
 		tileSelected = new Image("res/floor_selected.png");
 		tileEntrance = new Image("res/floor_entrance_1.png");
+		
+		buttonMoney = new Image("res/ui/money.png");
+		buttonGraph = new Image("res/ui/finance.png");
+		buttonFurniture = new Image("res/ui/furniture.png");
 	}
 }

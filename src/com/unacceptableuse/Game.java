@@ -51,6 +51,7 @@ public class Game extends BasicGame
 		for(Button b : buttons)
 		{
 			b.getBackgroundImage().draw(b.getBoundingBox().x, b.getBoundingBox().y);
+			if(b.getText() != null)
 			drawText(b.getText(), b.getBoundingBox().x, b.getBoundingBox().y);
 		}
 	}
@@ -121,7 +122,17 @@ public class Game extends BasicGame
 	}
 	public void mousePressed(int button, int x, int y)
 	{
-		
+		if(button == 1)
+		{
+			for(Button b : buttons)
+			{
+				if(b.getBoundingBox().intersects(x, y, 1, 1))
+				{
+					currentScreen.buttonAction(b.getAction());
+				}
+			}
+		}
+	
 	}
 	public void mouseReleased(int button, int x, int y)
 	{

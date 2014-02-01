@@ -90,10 +90,9 @@ public class ScreenShop extends Screen
         public void init()
         {
         	Button b = new Button();
-        	b.setBackgroundImage(ImageResource.tile);
-        	b.setAction("testAction");
-        	b.setText("Text text");
-        	b.setBoundingBox(new Rectangle(1, 1, 32, 32));
+        	b.setBackgroundImage(ImageResource.buttonFurniture);
+        	b.setAction("furniture");
+        	b.setBoundingBox(new Rectangle(10, 550, 32, 32));
         	Game.addButton(b);
                 for(int y = 0; y < floorWidth; y++)
                 {
@@ -109,6 +108,11 @@ public class ScreenShop extends Screen
         public void onExit()
         {
         }
+
+		@Override
+		public void buttonAction(String action)
+		{
+		}
         
         
 

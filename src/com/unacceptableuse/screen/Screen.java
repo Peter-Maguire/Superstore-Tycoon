@@ -37,6 +37,12 @@ public abstract class Screen
 	 */
 	public abstract void onExit(); 
 	
+	/**
+	 * Called when a button is pressed
+	 * @param action
+	 */
+	public abstract void buttonAction(String action);
+	
 	public void mouseMoved(int oldx, int oldy, int newx, int newy){};
 	
 }
