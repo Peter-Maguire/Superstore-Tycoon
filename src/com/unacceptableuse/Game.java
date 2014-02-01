@@ -1,5 +1,6 @@
 package com.unacceptableuse;
 
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -11,6 +12,7 @@ import org.newdawn.slick.SlickException;
 
 import com.unacceptableuse.resource.ImageResource;
 import com.unacceptableuse.resource.TileRegistry;
+import com.unacceptableuse.screen.Button;
 import com.unacceptableuse.screen.Screen;
 import com.unacceptableuse.screen.ScreenShop;
 
@@ -26,6 +28,8 @@ public class Game extends BasicGame
 	
 	public static Screen currentScreen = null;
 	
+	private static ArrayList<Button> buttons = new ArrayList<Button>();
+	
 	public Game(String title)
 	{
 		super(title);
@@ -38,7 +42,32 @@ public class Game extends BasicGame
 	{
 		this.g = g;
 		currentScreen.render();
+		renderButtons();
 		
+	}
+	
+	private static void renderButtons()
+	{
+		for(Button b : buttons)
+		{
+			b.getBackgroundImage().draw(b.getBoundingBox().x, b.getBoundingBox().y);
+			drawText(b.getText(), b.getBoundingBox().x, b.getBoundingBox().y);
+		}
+	}
+	
+	public static void addButton(Button b)
+	{
+		buttons.add(b);
+	}
+	
+	public static ArrayList<Button> getButtons()
+	{
+		return buttons;
+	}
+	
+	public static void clearButtons()
+	{
+		buttons.clear();
 	}
 
 	@Override
@@ -88,7 +117,7 @@ public class Game extends BasicGame
 	
 	public void mouseMoved(int oldx, int oldy, int newx, int newy)
 	{
-		
+		currentScreen.mouseMoved(oldx, oldy, newx, newy);
 	}
 	public void mousePressed(int button, int x, int y)
 	{
